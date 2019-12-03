@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="/css/mystyle.css">
+</head>
+
+<body>
+  <div style="padding-left:15px;">
+    <ul >
+      <li style="float:left; font-size : 8px;"><a href="/">Demo Gadget Supplier Ltd.</a></li>
+      <li><a href="/logout">Log Out</a></li>
+      <li><a href="#about">Managers</a></li>
+      <li><a class="active" href="/products">Products</a></li>
+      <li><a  href="/orders/pending">Orders</a></li>
+
+
+    </ul>
+  </div>
+
+  <div style="padding-left:15px;">
+    <h3>
+      <ul  style="background-color : white;">
+        <div align="center">
+          <a class="button button1" href="/addproduct">Add Product</a>
+        </div>
+          
+        {{!-- </li> --}}
+      </ul>
+
+    </h3>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th style="text-align: center;">Product ID</th>
+          <th style="text-align: center;">Product Name</th>
+          <th style="text-align: center;">Price</th>
+          <th style="text-align: center;">Update Price</th>
+          <th style="text-align: center;">Update</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each list}}
+        <tr>
+          <td style="text-align: center;">{{this._id}}</td>
+          <td style="text-align: center;">{{this.name}}</td>
+          <td style="text-align: center;">{{this.price}}</td>
+          <form action="/products/update" method="post">
+          <input type="hidden" name="product_id" value="{{this._id}}">
+          <td style="text-align: center;"><input type="number" name = "price" value="{{this.price}}"></td>
+          <td style="text-align: center;"><input class="button button1" type="submit" name = "update" value="update"></td>
+          </form>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+</body>
+
+</html>

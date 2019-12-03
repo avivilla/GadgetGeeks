@@ -1,0 +1,29 @@
+{
+  "name": "bank",
+  "version": "1.0.0",
+  "description": "A Api for Banking",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "keywords": [
+    "Express",
+    "RestAPI",
+    "MongoDB",
+    "Mongoose",
+    "Accounts",
+    "Transactions"
+  ],
+  "author": "avivilla",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "bcrypt": "^3.0.6",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "express-session": "^1.16.2",
+    "mongoose": "^5.6.0",
+    "nodemon": "^1.19.1"
+  }
+}

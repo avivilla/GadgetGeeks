@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+
+  <link rel="stylesheet" type="text/css" href="/css/mystyle.css">
+</head>
+
+<body>
+  <div style="padding-left:15px;">
+    <ul>
+      <li style="float:left; font-size : 8px;"><a href="/">Wizard Bank Ltd.</a></li>
+      <li><a href="/logout">Log Out</a></li>
+      <li class="active"><a href="/accounts">Accounts</a></li>
+      <li><a href="/transactions">Transactions</a></li>
+      <li><a  href="/addaccount">Create Account</a></li>
+
+
+    </ul>
+  </div>
+
+  <div style="padding-left:15px;"> 
+    <h3> 
+      <ul style="background-color : white;">
+        
+         <div align="center">
+             <a style="font-size: 30px;">Accounts</a> 
+         </div>
+         
+         
+        
+      </ul>
+
+    </h3>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th style="text-align: center;">Account No.</th>
+          <th style="text-align: center;">Balance</th>
+          <th style="text-align: center;">Transactions</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each list}}
+        <tr>
+          <td style="text-align: center;">{{this.ac_no}}</td>
+          <td style="text-align: center;">{{this.balance}}</td>
+          <td style="text-align: center;">
+            <form action="/transactions/{{this.ac_no}}" >
+              <input type="hidden" name="order" value="{{this.ac_no}}">
+              <input class="button button1"type="submit" value="view transactions">
+            </form>
+          </td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<title>Validation - Demo Gadget Suppliers Pvt Ltd.</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<body>
+
+    <div class="w3-container">
+
+
+        <div class="w3-card-4  w3-padding w3-display-middle"
+            style=" background-color:rgb(63, 112, 141); width:75% ; height:75%;">
+
+            <div class="w3-container w3-center">
+                <h3 style="border:2px solid rgb(169, 198, 228);font-size:40px; color:white">Invalid Transaction</h3>
+                <div class="w3-container w3-padding w3-display-middle"
+                    style="border:4px solid rgb(169, 198, 228); color:white">
+                    <h4 style="text-align:left; color:red"> <b>TRX_ID  </b> {{trx_id}} not found</h4>
+                    {{!-- <h4 style="text-align:left; color:white"> <b>DETAILS :</b> {{order}} </h4>
+                    <h4 style="text-align:left; color:white"> <b>PRICE   :</b> {{list.amount}} BDT </h4> --}}
+                    <div class="w3-section">
+                    {{!-- <a href="/orders/confirm/{{list._id}}" class="w3-button w3-light-green w3-round-large">Confirm</a> --}}
+                        <a href="/orders/cancel1/{{trx_id}}" class="w3-button w3-deep-orange w3-round-large">Cancel</a>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

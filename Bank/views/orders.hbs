@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="/css/mystyle.css">
+</head>
+
+<body>
+  <div style="padding-left:15px;">
+    <ul>
+      <li style="float:left; font-size : 8px;"><a href="#home">Demo Gadget Supplier Ltd.</a></li>
+      <li><a href="#about">Log Out</a></li>
+      <li><a href="#about">Managers</a></li>
+      <li><a href="/products">Products</a></li>
+      <li><a class="active" href="/orders/pending">Orders</a></li>
+
+
+    </ul>
+  </div>
+
+  <div style="padding-left:15px;">
+    <h3>
+      <ul style="background-color : white;">
+        <li style="float:left;">
+          <a class="button" href="/orders/pending">Pending Orders</a>
+          <a class="button button1" href="/orders/delivered">Delivered Orders</a>
+        </li>
+      </ul>
+
+    </h3>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th style="text-align: center;">Account No.</th>
+          <th style="text-align: center;">Balance</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each list}}
+        <tr>
+          <td style="text-align: center;">{{this.ac_no}}</td>
+          <td style="text-align: center;">{{this.balance}}</td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+</body>
+
+</html>

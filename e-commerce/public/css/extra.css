@@ -1,0 +1,40 @@
+.extrabutton {
+    /* cursor: pointer; */
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #3a6194;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 15px;
+    padding: 5px;
+    width: 120px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  /* .extrabutton {
+    
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .extrabutton:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  } */
+  
+  .extrabutton:hover span {
+    padding-right: 25px;
+  }
+  
+  .extrabutton:hover span:after {
+    opacity: 1;
+    right: 0;
+  }

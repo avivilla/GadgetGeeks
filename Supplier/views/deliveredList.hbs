@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="/css/mystyle.css">
+</head>
+
+<body>
+  <div style="padding-left:15px;">
+    <ul >
+      <li style="float:left; font-size : 8px;"><a href="/">Demo Gadget Supplier Ltd.</a></li>
+      <li><a href="/logout">Log Out</a></li>
+      <li><a href="#about">Managers</a></li>
+      <li><a href="/products">Products</a></li>
+      <li><a class="active" href="/orders/pending">Orders</a></li>
+
+
+    </ul>
+  </div>
+
+  <div style="padding-left:15px;">
+    <h3>
+      <ul  style="background-color : white;">
+        <div align="center">
+          <a class="button button1" href="/orders/pending">Pending Orders</a>
+          <a class="button " href="/orders/delivered">Delivered Orders</a>
+        </div>
+      </ul>
+
+    </h3>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>TRX_ID</th>
+          <th>Details</th>
+          <th>Cost</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each list}}
+        <tr>
+          <td>{{this.trx_id}}</td>
+          <td>{{this.details}}</td>
+          <td>{{this.price}}</td>
+          <td style="color:MediumSeaGreen;">{{this.status}}</td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+</body>
+
+</html>

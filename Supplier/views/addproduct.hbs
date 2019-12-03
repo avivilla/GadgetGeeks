@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<title>ADD PRODUCT - Demo Gadget Suppliers Pvt Ltd.</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="/css/formstyles.css">
+
+<body style=" background-color:rgb(63, 112, 141);">
+    <div>
+        {{!-- <div class="w3-card-4  w3-padding w3-display-middle"
+            style=" background-color:rgb(63, 112, 141); width:100%; height : 100%"> --}}
+            <div class="w3-container w3-center">
+                <h3 style="font-size:40px; color:white">Demo Gadget Supplier Ltd.</h3>
+                <h4 style="font-size:30px; color:white">Add Product Details</h3>
+                <form class="form-style-9" action="/products" method="post">
+                    <ul>
+                        <li>
+                            <input type="text" name="name" class="field-style field-split align-left"
+                                placeholder="Product Name" required/>
+                            <input type="number" name="price" class="field-style field-split align-right"
+                                placeholder="Price" required/>
+
+                        </li>
+                        <li>
+                            <input type="text" name="img" class="field-style field-full align-none"
+                                placeholder="Imgae URL.." required/>
+                        </li>
+                        <li>
+                            <input type="text" name="display" class="field-style field-full align-none"
+                                placeholder="Display" required/>
+                        </li>
+                         <li>
+                            <input type="text" name="front_camera" class="field-style field-full align-none"
+                                placeholder="Front Camera" required/>
+                        </li>
+                        <li>
+                            <input type="text" name="rear_camera" class="field-style field-full align-none"
+                                placeholder="Rear_Camera" required/>
+                        </li>
+                        <li>
+                            <input type="text" name="battery" class="field-style field-full align-none"
+                                placeholder="Battery" required/>
+                        </li>
+                        <li>
+                            <input type="text" name="os" class="field-style field-full align-none"
+                                placeholder="OS" required/>
+                        </li>
+                        <li>
+                            <input type="text" name="processor" class="field-style field-full align-none"
+                                placeholder="Processor" required/>
+                        </li>
+                        <li>
+                            <input type="text" name="ram" class="field-style field-full align-none"
+                                placeholder="RAM" required/>
+                        </li><li>
+                            <input type="text" name="storage" class="field-style field-full align-none"
+                                placeholder="Storage" required/>
+                        </li>
+                        <li>
+                            <input type="submit" value="ADD Product" />
+                        </li>
+                    </ul>
+                </form>
+            {{!-- </div> --}}
+        </div>
+    </div>
+</body>
+
+</html>

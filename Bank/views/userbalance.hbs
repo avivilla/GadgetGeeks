@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="/css/mystyle.css">
+  <link rel="stylesheet" type="text/css" href="/css/style2.css">
+</head>
+
+<body>
+  <div >
+    <ul>
+      <li style="float:left; font-size : 8px;"><a href="/">Wizard Bank Ltd.</a></li>
+      <li><a href="/logout">Log Out</a></li>
+      <li class="active"><a href="/accounts/{{ac_no}}">My Account</a></li>
+      <li><a href="/accounts/transactions/{{ac_no}}">My Transactions</a></li>
+    </ul>
+  </div>
+
+  
+     <div class="flex-container" >
+       <div>
+           <div style="padding: 25px;">
+            <h1 align="center" style="color: rgb(63, 112, 141);">Dear Customer,</h1>
+           <h1 align="center" style="color: rgb(63, 112, 141);">Your Account Number is : {{ac_no}}</h1>
+           <h1 align="center" style="color: rgb(63, 112, 141);">&AMP;</h1>
+           <h1 align="center" style="color: rgb(63, 112, 141);">Your Account Balance is  </h1>
+           <h1 align="center" style="color: rgb(63, 112, 141);"> BDT {{balance}}</h1>
+           </div>
+       </div>
+           
+
+     </div>
+     <h3 align="center" style="color: rgb(63, 112, 141);">For any query contact our helpline : 12345 </h3>
+  
+</body>
+
+</html>
